@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+
+    <title>uniben marine enginnering cgpa calculator</title>
+
+    <link rel="stylesheet" href="{% static 'asset/css/main.css' %}">
+
+</head>
+<body>
+
+	<img class="imgz" src="{% static 'asset/unibenlogo.png' %}" alt="logo">
+    <h1 style="text-align: center;">welcome Great Mariner </h1>
+
+	<div class="container">
+		
+        <h3 style="text-align: center;">What LEVEL CGPA do you want to calculate</h3>
+<div class="form_control">
+
+<form action="" method="post">
+
+    {% csrf_token %}
+    
+    <div class="action_container">
+        <button type="submit" name="one" class="danger">Year ONE (100 LEVEL)</button> <br/>  <br/>  <br/>
+    
+</div>  <br/> <br/>
+
+<div class="action_container">
+    <button type="submit" name="two" class="danger">Year TWO (200 LEVEL)</button> <br/>  <br/>  <br/>
+
+</div>  <br/>  <br/>
+
+
+<div class="action_container">
+<button type="submit" name="three" class="danger">Year THREE (300 LEVEL)</button> <br/>  <br/>  <br/>
+
+</div>  <br/> <br/>
+
+
+<div class="action_container">
+<button type="submit" name="four" class="danger">Year FOUR (400 LEVEL)</button> <br/>  <br/>  <br/>
+
+</div>
+
+
+
+
+</form>
+    
+
+</div>
+
+    
+
+
+    <script src="{% static 'asset/js/main.js' %}"></script>
+</body>
+<br/><br/><br/><br/><br/>
+<footer class="footer">
+	<p> &copy; 2023. Inspired by marine enginnering eng200 <a href="https://github.com/martcpp">martcpp</a></p>
+</footer>
+
+</html>
