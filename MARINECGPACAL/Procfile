@@ -1,1 +1,0 @@
-web: gunicorn cgpacal.wsgi --log-file -
