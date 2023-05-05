@@ -118,6 +118,10 @@ body {
     background-color: #ff5722 !important;
 }
 
+.display {
+    background-color: #e5b4a5 !important;
+}
+
 .action_container {
     display: inline-flex;
 }

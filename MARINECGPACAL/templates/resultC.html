@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+
+    <title>uniben marine enginnering cgpa calculator</title>
+
+    <link rel="stylesheet" href="{% static 'asset/css/main.css' %}">
+
+</head>
+<body>
+
+	<img class="imgz" src="{% static 'asset/unibenlogo.png' %}" alt="logo">
+    <h1 style="text-align: center;">YOU STILL A SEAFARS BOSS </h1>
+    
+	<div class="action_container">
+		<h2>TOTAL CREDIT LOAD FOR FIRST SEMESTER </h2><input style="font-size: large;" class="danger" type="text" value="{{firstTC}}" readonly> <br/>  <br/>  <br/>
+	
+	</div>
+	
+    
+</div>  <br/> <br/>
+
+<div class="action_container">
+	<h2>FIRST SEMESTER GPA </h2><input style="font-size: large;" class="danger" type="text" value="{{firstGPA}}" readonly> <br/>  <br/>  <br/>
+
+</div>
+
+
+</div>  <br/>  <br/>
+
+
+<div class="action_container">
+	<h2>TOTAL CREDIT LOAD FOR SECOND SEMESTER </h2><input style="font-size: large;" class="danger" type="text" value="{{secondTC}}" readonly> <br/>  <br/>  <br/>
+
+</div>
+
+
+</div>  <br/> <br/>
+
+
+<div class="action_container">
+	<h2>SECOND SEMESTER GPA</h2><input style="font-size: large;" class="danger" type="text" value="{{secondGPA}}" readonly> <br/>  <br/>  <br/>
+
+</div>  <br/> <br/>
+
+
+<div class="action_container">
+	<h2>300 LEVEL CGPA </h2><input style="font-size: large;" class="danger" type="text" value="{{totalCGPA}}" readonly> <br/>  <br/>  <br/>
+
+</div>
+
+
+<br/> <br/>
+
+<form action="resultA" method="get">
+
+<div class="action_container">
+	<button type="submit" name="homepage" class="danger">homepage</button> 
+	<button type="submit" name="another" class="danger">calculate another</button> 
+
+	
+	</div>
+
+</form>
+
+	
+	</div>
+
+</div>
+
+    
+
+
+    <script src="{% static 'asset/js/main.js' %}"></script>
+</body>
+<br/><br/><br/><br/><br/>
+<footer class="footer">
+	<p> &copy; 2023. Inspired by marine enginnering eng200 <a href="https://github.com/martcpp">martcpp</a></p>
+</footer>
+
+</html>

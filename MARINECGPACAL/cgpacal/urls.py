@@ -4,9 +4,13 @@ from . import views
 urlpatterns =[
     path('', views.index , name='index'),
     path('one', views.one , name='one'),
-    path('two', views.two , name='two'),
+    path('two', views.two, name='two'),
     path('three', views.three , name='three'),
     path('four', views.four, name='four'),
+    path('resultA', views.resultA , name='resultA'),
+    path('resultB', views.resultB , name='resultB'),
+    path('resultC', views.resultC , name='resultC'),
+    path('resultD', views.resultD , name='resultD'),
     
 
 

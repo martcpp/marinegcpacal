@@ -3,248 +3,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
-
-    <title>uniben marine enginnering cgpa calculator</title>
-
-    <link rel="stylesheet" href="{% static 'asset/css/main.css' %}">
-
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>uniben marine enginnering cgpa calculator</title>
+	<link rel="stylesheet" href="{% static 'asset/css/main.css' %}">
 </head>
+
+
 <body>
-
-	<img class="imgz" src="{% static 'asset/unibenlogo.png' %}" alt="logo">
-
 	<div class="container">
-		<h1 style="text-align: center;">MARINE enginnering CGPA calculator</h1> <br/>
-
+	<img class="imgz" src="{% static 'asset/unibenlogo.png' %}" alt="logo">
+	 <form action="resultD" method="post" >
 		
-        <h1 style="text-align: center;">FIRST SEMESTER</h1>
-
+		{% csrf_token %}
 		
-
+		<h1 style="text-align: center;" class="form_control"> FIRST SEMESTER</h1>
 		<table class="_table">
-			
-		  <thead>
-			
-			<tr>
-			  <th>course</th>
-			  <th>creditload</th>
-			  <th>grade</th>
-			  
-
-
-		
-
-			  </th>
-			</tr>
-		  </thead>
-		  <tbody id="table_body">
-			<tr>
-			  <td>
-				{% for course in courses %}
-				
-		<input name="creditt" type="text" class="form_control" placeholder="{{course}}" value="{{course}}" readonly >
-
-				{% endfor %}
-			  </td>
-
-			  <td>
-                 
-				<form action="" method="POST">
-				<input name="credit1" name="" type="text" class="form_control" placeholder="" value="4" >
-				<input name="creditt2" type="text" class="form_control" placeholder="jajah" value="" >
-				<input name="credit3" type="text" class="form_control" placeholder="jajah" value="" >
-				<input name="credit4" type="text" class="form_control" placeholder="jajah" value="" >
-				<input name="credit5" type="text" class="form_control" placeholder="jajah" value="" >
-				<input name="credit6" type="text" class="form_control" placeholder="jajah" value="" >
-				<input name="credit7" type="text" class="form_control" placeholder="jajah" value="" >
-				<input name="credit8" type="text" class="form_control" placeholder="jajah" value="" >
-				<input name="credit9" type="text" class="form_control" placeholder="jajah" value="" >
-
-				
-				
-			  </td>
-
-			  <td>
-				{% for course in courses %}
-				<select class="form_control"  name="{{course}}" id="">
-					
-					
-					<option value="5">A</option>
-					<option value="4">B</option>
-					<option value="3">C</option>
-					<option value="2">D</option>
-					<option value="1">E</option>
-					<option value="0">F</option>
-
-
-				</select>
-
-				{% endfor %}
-				
-			  </td>
-
-			
-			  
-			</tr>
-		  </tbody>
-		</form>
-		  <thead>
-			
-			<tr>
-			  <th>total creditload</th>
-			  <th>GPA</th>
-			</tr>
-		  </thead>
-		  <tbody>
-			<tr>
-				<td>
-					<input class="form_control" name="totalcreditload" type="number" readonly>
-				</td>
-
-				<td>
-					<input class="form_control" name="GPA" type="number" readonly>
-				</td>
-
-				<td>
-					<div class="action_container">
-						<button type="submit"  class="danger">calculate</button>
-				</td>
-			</tr>
-		  </tbody>
-		</table>
-
-
-
-
-		<h1 style="text-align: center;">SECOND SEMESTER</h1>
-
-		
-		<table class="_table">
-			
 			<thead>
-			  
-			  <tr>
-				<th>course</th>
-				<th>creditload</th>
-				<th>grade</th>
-				
-  
-  
-		  
-  
-				</th>
-			  </tr>
-			</thead>
-			<tbody id="table_body">
-			  <tr>
-				<td>
-				  {% for course in courses %}
-				  
-		  <input name="creditt" type="text" class="form_control" placeholder="{{course}}" value="{{course}}" readonly >
-  
-				  {% endfor %}
-				</td>
-  
-				<td>
-				   
-				  <form action="" method="POST">
-				  <input name="credit1" name="" type="text" class="form_control" placeholder="" value="4" >
-				  <input name="creditt2" type="text" class="form_control" placeholder="jajah" value="" >
-				  <input name="credit3" type="text" class="form_control" placeholder="jajah" value="" >
-				  <input name="credit4" type="text" class="form_control" placeholder="jajah" value="" >
-				  <input name="credit5" type="text" class="form_control" placeholder="jajah" value="" >
-				  <input name="credit6" type="text" class="form_control" placeholder="jajah" value="" >
-				  <input name="credit7" type="text" class="form_control" placeholder="jajah" value="" >
-				  <input name="credit8" type="text" class="form_control" placeholder="jajah" value="" >
-				  <input name="credit9" type="text" class="form_control" placeholder="jajah" value="" >
-  
-				  
-				  
-				</td>
-  
-				<td>
-				  {% for course in courses %}
-				  <select class="form_control"  name="{{course}}" id="">
-					  
-					  
-					  <option value="5">A</option>
-					  <option value="4">B</option>
-					  <option value="3">C</option>
-					  <option value="2">D</option>
-					  <option value="1">E</option>
-					  <option value="0">F</option>
-  
-  
-				  </select>
-  
-				  {% endfor %}
-				  
-				</td>
-  
-			  
-				
-			  </tr>
-			</tbody>
-		  </form>
-			<thead>
-			  
-			  <tr>
-				<th>total creditload</th>
-				<th>GPA</th>
-			  </tr>
-			</thead>
-			<tbody>
-			  <tr>
-				  <td>
-					  <input class="form_control" name="totalcreditload" type="number" readonly>
-				  </td>
-  
-				  <td>
-					  <input class="form_control" name="GPA" type="number" readonly>
-				  </td>
-  
-				  <td>
-					  <div class="action_container">
-						  <button type="submit"  class="danger">calculate</button>
-				  </td>
-			  </tr>
-			</tbody>
-		  </table>
-
-		<table class="_table">
-		<thead>
 			
-			<tr>
-			  <th>total creditload</th>
-			  <th>CGPA</th>
-			</tr>
-		  </thead>
-		  <tbody>
-			<tr>
-				<td>
-					<input class="form_control" name="totalcreditload3" type="number" readonly>
-				</td>
-
-				<td>
-					<input class="form_control" name="CGPA" type="number" readonly>
-				</td>
-			</tr>
-		  </tbody>
-
-        </table>
+				<tr>
+				  <th>course</th>
+				  <th>creditload</th>
+				  <th>grade</th>
+				  
 	
-	  </div>
+	
+			
+	
+				  </th>
+				</tr>
+			  </thead>
+        <tbody id="table_body">
+			<tr>
+		
+		
+		<br/>
+		<td>
+			{% for courseA in coursesA %}
+		
+		<input name="{{courseA}}" type="text" class="form_control" value="{{courseA}}" readonly> 
+	
+	
+		{% endfor %}
 
 
-    <script src="{% static 'asset/js/main.js' %}"></script>
+		</td>
+		  <td>
+		
+		<input class="form_control" name="credit1" type="text" value="3" readonly> 
+		<input class="form_control" name="credit2" type="text" value="2" readonly> 
+		<input class="form_control" name="credit3" type="text" value="3" readonly> 
+		<input class="form_control" name="credit4" type="text" value="3" readonly> 
+		<input class="form_control" name="credit5" type="text" value="3" readonly> 
+		<input class="form_control" name="credit6" type="text" value="3" readonly> 
+		<input class="form_control" name="credit7" type="text" value="3" readonly> 
+		<input class="form_control" name="credit8" type="text" value="3" readonly>
+		 
+	</td>
+	<td>
+		<select class="form_control" name="grade1" id="">
+			<option value="5">A</option>
+			<option value="4">B</option>
+			<option value="3">C</option>
+			<option value="2">D</option>
+			<option value="1">E</option>
+			<option value="0">F</option>
+
+		</select>
+		<select class="form_control" name="grade2" id="">
+			<option value="5">A</option>
+			<option value="4">B</option>
+			<option value="3">C</option>
+			<option value="2">D</option>
+			<option value="1">E</option>
+			<option value="0">F</option>
+
+		</select>
+
+		<select class="form_control" name="grade3" id="">
+			<option value="5">A</option>
+			<option value="4">B</option>
+			<option value="3">C</option>
+			<option value="2">D</option>
+			<option value="1">E</option>
+			<option value="0">F</option>
+
+		</select>
+		<select class="form_control" name="grade4" id="">
+			<option value="5">A</option>
+			<option value="4">B</option>
+			<option value="3">C</option>
+			<option value="2">D</option>
+			<option value="1">E</option>
+			<option value="0">F</option>
+			
+
+		</select>
+	
+		<select class="form_control" name="grade5" id="">
+			<option value="5">A</option>
+			<option value="4">B</option>
+			<option value="3">C</option>
+			<option value="2">D</option>
+			<option value="1">E</option>
+			<option value="0">F</option>
+
+		</select>
+		<select class="form_control" name="grade6" id="">
+			<option value="5">A</option>
+			<option value="4">B</option>
+			<option value="3">C</option>
+			<option value="2">D</option>
+			<option value="1">E</option>
+			<option value="0">F</option>
+
+		</select>
+		<select class="form_control" name="grade7" id="">
+			<option value="5">A</option>
+			<option value="4">B</option>
+			<option value="3">C</option>
+			<option value="2">D</option>
+			<option value="1">E</option>
+			<option value="0">F</option>
+
+		</select>
+		<select class="form_control" name="grade8" id="">
+			<option value="5">A</option>
+			<option value="4">B</option>
+			<option value="3">C</option>
+			<option value="2">D</option>
+			<option value="1">E</option>
+			<option value="0">F</option>
+
+		</select>
+		
+
+
+
+
+		</td>
+				
+		
+	</tr>
+	</tbody>
+
+	</table>
+
+	<h1 style="text-align: center;" class="form_control"> SECOND SEMESTER</h1>
+		<table class="_table">
+			<thead>
+			
+				<tr>
+				  <th>course</th>
+				  <th>creditload</th>
+				  <th>grade</th>
+				  
+	
+	
+			
+	
+				  </th>
+				</tr>
+			  </thead>
+        <tbody id="table_body">
+			<tr>
+		
+		
+		<br/>
+		<td>
+			{% for courseB in coursesB %}
+		
+		<input name="{{courseB}}" type="text" class="form_control" value="{{courseB}}" readonly> 
+	
+	
+		{% endfor %}
+
+
+		</td>
+		  <td>
+		
+		<input class="form_control" name="credit11" type="text" value="6" readonly> 
+		
+	</td>
+	<td>
+		<select class="form_control" name="grade11" id="">
+			<option value="5">A</option>
+			<option value="4">B</option>
+			<option value="3">C</option>
+			<option value="2">D</option>
+			<option value="1">E</option>
+			<option value="0">F</option>
+
+		</select>
+		
+
+		</td>
+				
+		
+	</tr>
+	</tbody>
+
+	</table>
+	
+	<div style="align-items: center;" class="action_container">
+		<button  type="submit" class="danger">calculate</button> <br/>  <br/>  <br/>
+		
+		</div>
+
+	 </form>
+
+	</div>
 </body>
+
 <footer class="footer">
 	<p> &copy; 2023. Inspired by marine enginnering eng200 <a href="https://github.com/martcpp">martcpp</a></p>
 </footer>
-
 </html>
